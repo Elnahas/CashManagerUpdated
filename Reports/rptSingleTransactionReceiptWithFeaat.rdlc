@@ -563,7 +563,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Direction </Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
