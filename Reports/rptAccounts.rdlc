@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>7.65387cm</Width>
+              <Width>7.01887cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.82317cm</Width>
+              <Width>4.913cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.3777cm</Width>
+              <Width>3.02303cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.52683cm</Width>
+              <Width>8.99963cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -195,6 +195,39 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="CURRENT_BALANCE1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!CURRENT_BALANCE.Value</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>CURRENT_BALANCE1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="MONTHLY_LIMIT">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -218,39 +251,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="CURRENT_BALANCE">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!CURRENT_BALANCE.Value</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>CURRENT_BALANCE</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
                         <BackgroundColor>LightSteelBlue</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -269,9 +269,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!NOTES.Value</Value>
                               <Style>
-                                <FontWeight>Bold</FontWeight>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -318,7 +319,7 @@
         <Top>0.17639cm</Top>
         <Left>0.61383cm</Left>
         <Height>1.2cm</Height>
-        <Width>23.38157cm</Width>
+        <Width>23.95453cm</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -533,6 +534,10 @@
         <Field Name="CURRENT_BALANCE">
           <DataField>CURRENT_BALANCE</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="NOTES">
+          <DataField>NOTES</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
