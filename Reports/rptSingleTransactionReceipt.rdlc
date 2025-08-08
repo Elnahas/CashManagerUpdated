@@ -493,8 +493,7 @@
               <TextRun>
                 <Value>=Parameters!footer_message.Value</Value>
                 <Style>
-                  <FontSize>16pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -521,10 +520,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>5.23333in</Height>
+    <Height>5.58333in</Height>
     <Style />
   </Body>
-  <Width>4.03722in</Width>
+  <Width>4.19555in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
