@@ -312,7 +312,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ACCOUNT_IN_NAME.Value</Value>
+                              <Value>=IIF(IsNothing(Fields!ACCOUNT_IN_NAME.Value) OR Fields!ACCOUNT_IN_NAME.Value = "", 
+     "", 
+     Right(Fields!ACCOUNT_IN_NAME.Value, 3))</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -346,7 +348,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ACCOUNT_OUT_NAME.Value</Value>
+                              <Value>=IIF(IsNothing(Fields!ACCOUNT_OUT_NAME.Value) OR Fields!ACCOUNT_OUT_NAME.Value = "", 
+     "", 
+     Right(Fields!ACCOUNT_OUT_NAME.Value, 3))</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -396,6 +400,11 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>=Switch(
+    Fields!TRANSACTION_TYPE.Value = 1, "LightGreen",
+    Fields!TRANSACTION_TYPE.Value = 2, "LightCoral",
+    Fields!TRANSACTION_TYPE.Value = 3, "White"
+)</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -594,7 +603,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
