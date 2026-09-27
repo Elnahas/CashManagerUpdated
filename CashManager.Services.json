@@ -1,5 +1,5 @@
 ﻿{
-  "catalogVersion": 5,
+  "catalogVersion": 6,
   "services": [
     {
       "serviceCode": "VODAFONE_CASH_BALANCE",
@@ -820,6 +820,48 @@
           "انتهت صلاحية الطلب"
         ]
       }
-    }
+    },
+    {
+  "serviceCode": "VODAFONE_MYFAWRY_CASHOUT",
+  "serviceName": "سحب فودافون كاش إلى كارت فوري الأصفر",
+  "provider": "VODAFONE",
+  "serviceRole": null,
+  "amount": 0,
+  "profit": 0,
+  "profitType": 1,
+  "enabled": true,
+  "workflow": {
+    "dial": "*9*55#",
+    "steps": [
+      {
+        "waitFor": [
+          "لتاكيد دفع مبلغ",
+          "لتأكيد دفع مبلغ",
+          "MYFAWRY_AVL",
+          "رسوم ادخل الرقم السري",
+          "رسوم أدخل الرقم السري",
+          "ادخل الرقم السري",
+          "أدخل الرقم السري"
+        ],
+        "send": "{PIN}"
+      }
+    ],
+    "successKeywords": [
+      "تم دفع مبلغ",
+      "MYFAWRY_AVL",
+      "رسوم خدمة من محفظتك"
+    ],
+    "failureKeywords": [
+      "فشل",
+      "غير كاف",
+      "غير صحيح",
+      "غير متاح",
+      "لا يوجد رصيد كاف",
+      "الرقم السري خطأ",
+      "تم رفض الطلب",
+      "تعذر تنفيذ الطلب"
+    ]
+  }
+}
   ]
 }
