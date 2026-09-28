@@ -1,5 +1,5 @@
 ﻿{
-  "catalogVersion": 6,
+  "catalogVersion": 7,
   "services": [
     {
       "serviceCode": "VODAFONE_CASH_BALANCE",
@@ -860,6 +860,49 @@
       "الرقم السري خطأ",
       "تم رفض الطلب",
       "تعذر تنفيذ الطلب"
+    ]
+  }
+},
+ {
+  "serviceCode": "VODAFONE_FAWRY_CASH_WITHDRAWAL",
+  "serviceName": "سحب فودافون كاش من ماكينة فوري",
+  "provider": "VODAFONE",
+  "serviceRole": null,
+  "amount": 0,
+  "profit": 0,
+  "profitType": 1,
+  "enabled": true,
+  "workflow": {
+    "dial": "*9*1#",
+    "steps": [
+      {
+        "waitFor": [
+          "سيتم سحب",
+          "وخصم مصاريف الخدمة",
+          "بحد أدني",
+          "بحد أدنى",
+          "للتأكيد ادخل الرقم السرى",
+          "للتأكيد ادخل الرقم السري",
+          "للتأكيد أدخل الرقم السري",
+          "للتأكيد أدخل الرقم السرى"
+        ],
+        "send": "{PIN}"
+      }
+    ],
+    "successKeywords": [
+      "تم سحب",
+      "جنيه بنجاح",
+      "رسوم سحب"
+    ],
+    "failureKeywords": [
+      "فشل",
+      "غير كاف",
+      "غير صحيح",
+      "غير متاح",
+      "لا يوجد رصيد كاف",
+      "الرقم السري خطأ",
+      "تعذر تنفيذ الطلب",
+      "تم رفض الطلب"
     ]
   }
 }
